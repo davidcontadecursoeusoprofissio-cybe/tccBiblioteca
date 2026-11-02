@@ -1,10 +1,18 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@model CadastroLivrosModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Biblioteca</h1>
+
+<div>
+    <form method="post">
+        @Html.AntiForgeryToken()
+        
+        <label for="titulo">digite o título do livro</label>
+        <input id="titulo" name="titulo" type="text" required />
+
+        <label for="capa">cole a URL da capa</label>
+        <input id="capa" name="capa" type="text" required />
+
+        <button class="button2" type="submit">Cadastrar</button>
+    </form>
 </div>
